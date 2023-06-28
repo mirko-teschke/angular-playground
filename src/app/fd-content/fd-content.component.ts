@@ -18,6 +18,8 @@ export class FdContentComponent implements OnInit {
   generateData(num: number) {
     const result = [];
 
+    console.log(`starting ${new Date().getTime()}`);
+
     for (let i = 0; i < num; i++) {
       const obj = {
         column1: `user.name${i}@email.com`,
@@ -29,6 +31,9 @@ export class FdContentComponent implements OnInit {
 
       result.push(obj);
     }
+
+    console.log(`stopping ${new Date().getTime()}`);
+    console.log(`results: ${result.length}}`);
 
     return result;
   }
